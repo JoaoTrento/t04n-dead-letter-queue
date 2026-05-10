@@ -13,8 +13,8 @@ import com.arquitetura_fag_t04n.dlq.core.domain.enums.Severity;
 import com.arquitetura_fag_t04n.dlq.core.domain.enums.Status;
 
 public class PedidoErroBO {
-    @Id
-    private UUID errorId;
+    // @Id
+    // private UUID errorId;
 
     private String queueName;
 
@@ -29,13 +29,13 @@ public class PedidoErroBO {
     @Enumerated(EnumType.STRING)
     private Severity severity;
 
-    public UUID getErrorId() {
-        return errorId;
-    }
+    // public UUID getErrorId() {
+    //     return errorId;
+    // }
 
-    public void setErrorId(UUID errorId) {
-        this.errorId = errorId;
-    }
+    // public void setErrorId(UUID errorId) {
+    //     this.errorId = errorId;
+    // }
 
     public String getQueueName() {
         return queueName;
@@ -75,6 +75,10 @@ public class PedidoErroBO {
 
     public void setSeverity(int quantidadeItems) {
         this.severity = defineSeveridade(quantidadeItems);
+    }
+
+    public void setSeverity(Severity severity) {
+        this.severity = severity;
     }
 
     public Severity defineSeveridade(int quantidadeItems) {
