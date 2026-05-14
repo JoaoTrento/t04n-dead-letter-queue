@@ -19,6 +19,6 @@ public class PedidoErroService implements PedidoErroServicePort{
     @Override
     @Transactional
     public PedidoErroBO criarPedidoErro(PedidoErroBO pedidoErroBO) {
-        return criarPedidoErro(pedidoErroBO);
+        return pedidoErroRepositoryPort.salvar(pedidoErroBO);
     }
 }
